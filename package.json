@@ -1,0 +1,68 @@
+{
+  "name": "@niemenjoki/fi-invoice-payment-slip",
+  "version": "1.0.0",
+  "description": "Finnish invoice payment slip (tilisiirto, laskun maksuosa) for PDFKit: reference numbers (viitenumero, RF), bank bar code (virtuaaliviivakoodi v4/v5) and the bank app QR code.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "types": "./src/index.d.ts",
+  "files": [
+    "src"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "test": "node --test",
+    "example": "node examples/render.js"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  },
+  "peerDependencies": {
+    "pdfkit": ">=0.15.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "pdfkit": "^0.20.2"
+  },
+  "keywords": [
+    "finland",
+    "invoice",
+    "tilisiirto",
+    "viitenumero",
+    "virtuaaliviivakoodi",
+    "pankkiviivakoodi",
+    "rf-reference",
+    "epc-qr",
+    "pdfkit",
+    "tilisiirtolomake",
+    "lasku",
+    "laskun-maksuosa",
+    "invoice-pdf",
+    "payment-slip",
+    "bank-barcode",
+    "reference-number",
+    "giro",
+    "girering",
+    "qr-code",
+    "pdf"
+  ],
+  "author": "Joonas Niemenjoki",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niemenjoki/fi-invoice-payment-slip.git"
+  },
+  "homepage": "https://github.com/niemenjoki/fi-invoice-payment-slip#readme",
+  "bugs": {
+    "url": "https://github.com/niemenjoki/fi-invoice-payment-slip/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}
