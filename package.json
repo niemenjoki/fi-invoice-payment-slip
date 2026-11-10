@@ -1,6 +1,6 @@
 {
   "name": "@niemenjoki/fi-invoice-payment-slip",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Finnish invoice payment slip (tilisiirto, laskun maksuosa) for PDFKit: reference numbers (viitenumero, RF), bank bar code (virtuaaliviivakoodi v4/v5) and the bank app QR code.",
   "type": "module",
   "exports": {
@@ -11,7 +11,8 @@
   },
   "types": "./src/index.d.ts",
   "files": [
-    "src"
+    "src",
+    "CHANGELOG.md"
   ],
   "engines": {
     "node": ">=18.17"

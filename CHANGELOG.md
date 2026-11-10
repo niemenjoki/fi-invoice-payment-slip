@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1 - 2026-11-10
+
+- The npm package includes CHANGELOG.md.
+- Published from GitHub Actions with npm provenance.
+
 ## 1.0.0 - 2026-11-10
 
 First public release.
