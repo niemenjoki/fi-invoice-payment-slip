@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.2 - 2026-11-10
+
+- README: the first example writes the PDF to a file (`doc.pipe(fs.createWriteStream(...))`).
+- README: the package is an ES module only; how to use it from CommonJS.
+- No code changes.
+
 ## 1.0.1 - 2026-11-10
 
 - The npm package includes CHANGELOG.md.

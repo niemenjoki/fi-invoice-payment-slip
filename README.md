@@ -35,13 +35,17 @@ npm install @niemenjoki/fi-invoice-payment-slip pdfkit
 
 `pdfkit` is a peer dependency, so the slip is drawn with the same PDFKit you use for the rest of the invoice.
 
+The package is an ES module only. In a CommonJS project (`require`), use `await import('@niemenjoki/fi-invoice-payment-slip')` or Node.js 22.12 or newer.
+
 ## Add the slip to your invoice
 
 ```js
+import fs from 'node:fs';
 import PDFDocument from 'pdfkit';
 import { drawPaymentSlip, createFinnishReference } from '@niemenjoki/fi-invoice-payment-slip';
 
 const doc = new PDFDocument({ size: 'A4' });
+doc.pipe(fs.createWriteStream('invoice.pdf'));
 // ... your invoice content on the upper part of the page ...
 
 drawPaymentSlip(doc, {
@@ -54,7 +58,7 @@ drawPaymentSlip(doc, {
   dueDate: '2026-11-30',
   info: ['Invoice 123456'],
 });
-doc.end();
+doc.end(); // writes invoice.pdf
 ```
 
 The form is 210 × 101.6 mm and goes to the bottom of the current page unless you pass `{ x, y }` in points.

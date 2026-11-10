@@ -30,13 +30,17 @@ npm install @niemenjoki/fi-invoice-payment-slip pdfkit
 
 `pdfkit` on vertaisriippuvuus (peer dependency), joten lomake piirretään samalla PDFKitillä kuin muukin lasku.
 
+Paketti on pelkkä ES-moduuli. CommonJS-projektissa (`require`) käytä `await import('@niemenjoki/fi-invoice-payment-slip')` tai Node.js:n versiota 22.12 tai uudempaa.
+
 ## Maksuosa laskuun
 
 ```js
+import fs from 'node:fs';
 import PDFDocument from 'pdfkit';
 import { drawPaymentSlip, createFinnishReference } from '@niemenjoki/fi-invoice-payment-slip';
 
 const doc = new PDFDocument({ size: 'A4' });
+doc.pipe(fs.createWriteStream('lasku.pdf'));
 // ... laskun sisältö sivun yläosaan ...
 
 drawPaymentSlip(doc, {
@@ -49,7 +53,7 @@ drawPaymentSlip(doc, {
   dueDate: '2026-11-30',
   info: ['Lasku 123456'],
 });
-doc.end();
+doc.end(); // kirjoittaa tiedoston lasku.pdf
 ```
 
 Lomake on 210 × 101,6 mm, ja se piirretään nykyisen sivun alareunaan, ellei sijaintia anneta pisteinä (`{ x, y }`).
