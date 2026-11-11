@@ -22,6 +22,9 @@ Mitä paketti tekee:
 
 Koodit on testattu Finanssiala ry:n viivakoodi- ja QR-oppaiden esimerkkejä vasten (ks. [Testit](#testit)).
 
+Tuotantokäytössä: pienen verkkokauppani [lieromaa.fi](https://www.lieromaa.fi/?utm_source=github&utm_medium=readme&utm_campaign=fi-invoice-payment-slip):n laskujen maksuosa piirretään tällä
+paketilla.
+
 ## Asennus
 
 ```sh

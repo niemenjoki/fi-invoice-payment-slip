@@ -22,6 +22,9 @@ What it does:
 
 The codes are tested against the examples in Finance Finland's bar code and QR code guides (see [Tests](#tests)).
 
+Used in production: the payment slips of the invoices of [lieromaa.fi](https://www.lieromaa.fi/?utm_source=github&utm_medium=readme&utm_campaign=fi-invoice-payment-slip), my small online shop, are
+drawn with this package.
+
 **Suomeksi:** laskun maksuosa eli tilisiirtolomake PDF-laskuun Node.js:llä. Paketti laskee viitenumeron
 (myös RF-viitteen), tekee virtuaaliviivakoodin ja pankkiviivakoodin (versiot 4 ja 5) sekä pankkisovellusten
 QR-koodin ja piirtää lomakkeen Finanssiala ry:n mittojen mukaan. Lomakkeen tekstit ovat suomeksi ja ruotsiksi tai
